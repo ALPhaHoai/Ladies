@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Barcode Scaner</string>
+
+    <!--Titles-->
+    <string name="login_title">Đăng nhập</string>
+    <string name="signup_title">Đăng ký</string>
+
+    <!--Welcome messages-->
+    <string name="splash_welcome_txt">Xin chào bạn đến với Barcode Scaner</string>
+    <string name="login_welcome_txt">Chào mừng trở lại</string>
+    <string name="signup_welcome_txt">Đăng ký ngay</string>
+
+
+    <!--Button labels-->
+    <string name="login_btn_label">Đăng nhập</string>
+    <string name="signup_btn_label">Đăng ký</string>
+
+    <string name="login_label">" Đăng nhập"</string>
+    <string name="signup_label">" Đăng ký"</string>
+
+    <string name="get_started_btn_label">Quét ngay</string>
+
+    <!--Edit Text hints-->
+    <string name="email_address_hint">Địa chỉ email</string>
+    <string name="username_hint">Tên đăng nhập</string>
+    <string name="password_hint">Mật khẩu</string>
+
+
+    <!--Misc texts-->
+    <string name="no_account">Chưa có tài khoản?</string>
+    <string name="have_account">Đã có tài khoản?</string>
+
+    <!--User Profile-->
+    <!--statistics-->
+    <!--Tổng số sảng phẩm mà người này đã quyét-->
+    <string name="total_product_scaner_title">Product Scaner</string>
+    <!--Tống số sản phẩm đã vote-->
+    <string name="total_product_vote_title">Product Vote</string>
+    <!--Tống số comments-->
+    <string name="total_comments_title">Comments</string>
+
+    <!--Button recently activity-->
+    <string name="recently_activity">Hoạt động gần đây</string>
+
+    <!--Xem thông tin sản phẩm-->
+    <string name="similar_product_title">Các sản phẩm tương tự</string>
+
+</resources>

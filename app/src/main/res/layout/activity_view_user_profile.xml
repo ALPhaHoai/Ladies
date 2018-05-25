@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.anigoo.ladies.ViewUserProfile"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="310dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/gradientbackground"
+            android:orientation="vertical">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/user_avatar"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/default_avatar" />-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/user_avatar"
+                android:onClick="isLogout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/default_avatar"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#ffffff"/>
+
+            <TextView
+                android:id="@+id/user_full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_avatar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="User Full Name"
+                android:textColor="#fff"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:orientation="vertical"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!--Tổng số sảng phẩm mà người này đã quyét-->
+                    <TextView
+                        android:id="@+id/total_product_scaner_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_product_scaner_title"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/total_product_scaner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/startblue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--Tống số sản phẩm đã vote-->
+                    <TextView
+                        android:id="@+id/total_product_vote_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_product_vote_title"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/total_product_vote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/startblue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--Tống số comments-->
+                    <TextView
+                        android:id="@+id/total_comments_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_comments_title"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/total_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/endblue"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="InvalidId" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp">
+        <LinearLayout
+            android:id="@+id/email_block"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_email_black_24dp"/>
+            <TextView
+                android:id="@+id/email"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="example@gmail.com"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/phone_block"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_phone_android_black_24dp"/>
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/phone"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="0123456789"/>
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ImageView-->
+                <!--android:layout_width="36dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:src="@drawable/ic_group_add_black_24dp"/>-->
+            <!--<TextView-->
+                <!--android:textStyle="bold"-->
+
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:text="Add to group"/>-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ImageView-->
+                <!--android:layout_width="36dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:src="@drawable/ic_forum_black_24dp"/>-->
+            <!--<TextView-->
+                <!--android:textStyle="bold"-->
+
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:text="Show all comments"/>-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_margin="@dimen/container_layout_margin"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/bt_recently_activity"
+                style="@style/StrokeButtonStyle"
+                android:minWidth="@dimen/splash_btn_width"
+                android:text="@string/recently_activity"
+                android:onClick="viewRecentlyActivity"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_scan"
+                style="@style/SolidButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:minWidth="@dimen/splash_btn_width"
+                android:text="Scan"
+                android:onClick="scan"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+</LinearLayout>
